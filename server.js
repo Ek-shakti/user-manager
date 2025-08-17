@@ -97,9 +97,10 @@ app.use(express.json());
 const userRouter = require('./routes/userRouter');
 app.use('/api/users', userRouter);
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'index.html')));
 
 
 app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);
 });
+
